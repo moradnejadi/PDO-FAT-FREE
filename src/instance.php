@@ -1,18 +1,17 @@
 <?php
 
-namespace PdoFatFree;
+namespace moradnejadi\PdoFatFree;
 
-use DB\SQL\Mapper;
+use moradnejadi\PdoFatFree\DB\SQL\Mapper;
 
-
-class PdoFatFree extends Mapper
+class instance// extends Mapper
 {
     // Instantiate mapper
-    function __construct(DB\SQL $db)
-    {
+    //function __construct(DB\SQL $db)
+    //{
         // This is where the mapper and DB structure synchronization occurs
-        parent::__construct($db, 'vendors');
-    }
+    //    parent::__construct($db, 'vendors');
+   // }
 
     // Specialized query
     function listByCity()
