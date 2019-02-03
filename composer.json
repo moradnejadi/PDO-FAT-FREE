@@ -1,0 +1,20 @@
+{
+    "name": "mohsen/pdo-fat-free",
+    "description": "this is simple database abstraction layer for sql, mysql and ... databases.",
+    "type": "library",
+    "license": "Apache License 2.0",
+    "authors": [
+        {
+            "name": "mohsen moradnejadi",
+            "email": "moshen.moradnejadi@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "PdoFatFree": "src/"
+        }
+    }
+}
