@@ -1,6 +1,6 @@
 {
     "name": "moradnejadi/PdoFatFree",
-    "description": "this is simple database abstraction layer for sql, mysql and ... databases.",
+    "description": "this is so simple database abstraction layer for sql, mysql and ... databases.",
     "type": "library",
     "license": "MIT",
     "authors": [
