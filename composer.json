@@ -1,5 +1,5 @@
 {
-    "name": "moradnejadi/PdoFatFree",
+    "name": "moradnejadi/pdofatfree",
     "description": "this is so simple database abstraction layer for sql, mysql and ... databases.",
     "type": "library",
     "license": "MIT",
