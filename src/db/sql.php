@@ -507,7 +507,7 @@ class SQL {
 	*	@param $options array
 	**/
 	function __construct($dsn,$user=NULL,$pw=NULL,array $options=NULL) {
-		$fw=\moradnejadi\pdoFatFree\Base::instance();
+		$fw=\moradnejadi\pdofatfree\Base::instance();
 		$this->uuid=$fw->hash($this->dsn=$dsn);
 		if (preg_match('/^.+?(?:dbname|database)=(.+?)(?=;|$)/is',$dsn,$parts))
 			$this->dbname=$parts[1];
