@@ -23,7 +23,7 @@
 namespace moradnejadi\pdofatfree\DB;
 
 //! Simple cursor implementation
-abstract class Cursor extends \moradnejadi\pdofatfree\Magic implements IteratorAggregate {
+abstract class Cursor extends \moradnejadi\pdofatfree\Magic implements \IteratorAggregate {
 
 	//@{ Error messages
 	const
