@@ -20,10 +20,10 @@
 
 */
 
-namespace DB\SQL;
+namespace moradnejadi\pdofatfree\DB\SQL;
 
 //! SQL data mapper
-class Mapper extends \DB\Cursor {
+class Mapper extends moradnejadi\pdofatfree\DB\Cursor {
 
 	protected
 		//! PDO wrapper
