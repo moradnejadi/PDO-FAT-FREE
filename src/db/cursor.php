@@ -20,7 +20,7 @@
 
 */
 
-namespace DB;
+namespace moradnejadi\pdofatfree\DB;
 
 //! Simple cursor implementation
 abstract class Cursor extends Magic implements IteratorAggregate {
