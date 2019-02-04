@@ -1,10 +1,10 @@
 <?php
 
-namespace moradnejadi\PdoFatFree;
+namespace moradnejadi\pdofatfree;
 
-use moradnejadi\PdoFatFree\DB\SQL\Mapper;
+use moradnejadi\pdofatfree\DB\SQL\Mapper;
 
-class instance// extends Mapper
+class instance //extends Mapper
 {
     // Instantiate mapper
     //function __construct(DB\SQL $db)
