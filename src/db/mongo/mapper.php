@@ -20,10 +20,10 @@
 
 */
 
-namespace DB\Mongo;
+namespace moradnejadi\pdofatfree\DB\Mongo;
 
 //! MongoDB mapper
-class Mapper extends \DB\Cursor {
+class Mapper extends moradnejadi\pdofatfree\DB\Cursor {
 
 	protected
 		//! MongoDB wrapper
