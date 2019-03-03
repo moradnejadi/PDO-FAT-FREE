@@ -170,8 +170,8 @@ class SQL {
 		}
 		if ($this->log===FALSE)
 			$log=FALSE;
-		$fw=\Base::instance();
-		$cache=\Cache::instance();
+		$fw=\moradnejadi\pdofatfree\Base::instance();
+		$cache=\moradnejadi\pdofatfree\Cache::instance();
 		$result=FALSE;
 		for ($i=0;$i<$count;$i++) {
 			$cmd=$cmds[$i];
@@ -311,8 +311,9 @@ class SQL {
 	*	@param $ttl int|array
 	**/
 	function schema($table,$fields=NULL,$ttl=0) {
-		$fw=\Base::instance();
-		$cache=\Cache::instance();
+		$fw = \moradnejadi\pdofatfree\Base::instance();
+		$cache = \moradnejadi\pdofatfree\Cache::instance();
+
 		if ($fw->CACHE && $ttl &&
 			($cached=$cache->exists(
 				$hash=$fw->hash($this->dsn.$table).'.schema',$result)) &&
@@ -320,6 +321,7 @@ class SQL {
 			return $result;
 		if (strpos($table,'.'))
 			list($schema,$table)=explode('.',$table);
+
 		// Supported engines
 		$cmd=[
 			'sqlite2?'=>[
@@ -374,7 +376,7 @@ class SQL {
 				'FIELD','TYPE','DEFVAL','NULLABLE','Y','PKEY','P']
 		];
 		if (is_string($fields))
-			$fields=\Base::instance()->split($fields);
+			$fields=\moradnejadi\pdofatfree\Base::instance()->split($fields);
 		$conv=[
 			'int\b|integer'=>\PDO::PARAM_INT,
 			'bool'=>\PDO::PARAM_BOOL,
@@ -400,11 +402,13 @@ class SQL {
 							'pkey'=>$row[$val[6]]==$val[7]
 						];
 					}
+
 				if ($fw->CACHE && $ttl)
 					// Save to cache backend
 					$cache->set($hash,$rows,$ttl);
 				return $rows;
 			}
+
 		user_error(sprintf(self::E_PKey,$table),E_USER_ERROR);
 		return FALSE;
 	}

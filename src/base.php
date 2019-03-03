@@ -29,10 +29,9 @@ abstract class Prefab {
 	**/
 	static function instance() {
 		if (!Registry::exists($class=get_called_class())) {
-			$ref=new Reflectionclass($class);
+			$ref=new \Reflectionclass($class);
 			$args=func_get_args();
-			Registry::set($class,
-				$args?$ref->newinstanceargs($args):new $class);
+			Registry::set($class, $args?$ref->newinstanceargs($args):new $class);
 		}
 		return Registry::get($class);
 	}
@@ -40,7 +39,7 @@ abstract class Prefab {
 }
 
 //! Base structure
-final class Base extends Prefab implements ArrayAccess {
+final class Base extends Prefab implements \ArrayAccess {
 
 	//@{ Framework details
 	const

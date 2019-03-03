@@ -408,6 +408,7 @@ class Mapper extends \moradnejadi\pdofatfree\DB\Cursor {
 	*	@return static
 	**/
 	function insert() {
+	    //exit(var_dump($this->fields));
 		$args=[];
 		$actr=0;
 		$nctr=0;
@@ -686,7 +687,8 @@ class Mapper extends \moradnejadi\pdofatfree\DB\Cursor {
 	*	@param $fields array|string
 	*	@param $ttl int|array
 	**/
-	function __construct(\DB\SQL $db,$table,$fields=NULL,$ttl=60) {
+	function __construct(\moradnejadi\pdofatfree\DB\SQL $db,$table,$fields=NULL,$ttl=60) {
+
 		$this->db=$db;
 		$this->engine=$db->driver();
 		if ($this->engine=='oci')
