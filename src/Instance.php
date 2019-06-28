@@ -1,13 +1,13 @@
 <?php
 
-namespace moradnejadi\pdofatfree;
+namespace moradnejadi\framework_font_office_core;
 
-use moradnejadi\pdofatfree\DB\SQL\Mapper;
+use moradnejadi\framework_font_office_core\DB\SQL\Mapper;
 
 class Instance extends Mapper
 {
     // Instantiate mapper
-    function __construct(\moradnejadi\pdofatfree\DB\SQL $db, $table = null)
+    function __construct(\moradnejadi\framework_font_office_core\DB\SQL $db, $table = null)
     {
         // This is where the mapper and DB structure synchronization occurs
         parent::__construct($db, $table);
@@ -41,7 +41,6 @@ class Instance extends Mapper
         // continue inserting process...
         return parent::insert();
     }
-
 
     /**
      * This function Generates an Unique ID in System Project
@@ -134,6 +133,5 @@ class Instance extends Mapper
 
         return ReturnResult(__FILE__, __LINE__, false);
     }
-
 
 }

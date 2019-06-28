@@ -20,10 +20,10 @@
 
 */
 
-namespace moradnejadi\pdofatfree\DB\Mongo;
+namespace moradnejadi\framework_font_office_core\DB\Mongo;
 
 //! MongoDB mapper
-class Mapper extends moradnejadi\pdofatfree\DB\Cursor {
+class Mapper extends moradnejadi\framework_font_office_core\DB\Cursor {
 
 	protected
 		//! MongoDB wrapper

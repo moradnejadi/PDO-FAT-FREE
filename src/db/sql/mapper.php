@@ -20,10 +20,10 @@
 
 */
 
-namespace moradnejadi\pdofatfree\DB\SQL;
+namespace moradnejadi\framework_font_office_core\DB\SQL;
 
 //! SQL data mapper
-class Mapper extends \moradnejadi\pdofatfree\DB\Cursor {
+class Mapper extends \moradnejadi\framework_font_office_core\DB\Cursor {
 
 	protected
 		//! PDO wrapper
@@ -687,7 +687,7 @@ class Mapper extends \moradnejadi\pdofatfree\DB\Cursor {
 	*	@param $fields array|string
 	*	@param $ttl int|array
 	**/
-	function __construct(\moradnejadi\pdofatfree\DB\SQL $db,$table,$fields=NULL,$ttl=60) {
+	function __construct(\moradnejadi\framework_font_office_core\DB\SQL $db,$table,$fields=NULL,$ttl=60) {
 
 		$this->db=$db;
 		$this->engine=$db->driver();

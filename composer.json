@@ -1,6 +1,6 @@
 {
-    "name": "moradnejadi/pdofatfree",
-    "description": "this is so simple database abstraction layer for sql, mysql and ... databases.",
+    "name": "moradnejadi/framework_front_office_core",
+    "description": "this is core of framework front office as composer vendor package",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "moradnejadi\\pdofatfree\\": "src/"
+            "moradnejadi\\framework_front_office_core\\": "src/"
         }
     }
 }

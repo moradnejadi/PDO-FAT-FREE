@@ -20,10 +20,10 @@
 
 */
 
-namespace moradnejadi\pdofatfree\DB;
+namespace moradnejadi\framework_font_office_core\DB;
 
 //! Simple cursor implementation
-abstract class Cursor extends \moradnejadi\pdofatfree\Magic implements \IteratorAggregate {
+abstract class Cursor extends \moradnejadi\framework_font_office_core\Magic implements \IteratorAggregate {
 
 	//@{ Error messages
 	const
