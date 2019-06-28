@@ -1,13 +1,13 @@
 <?php
 
-namespace moradnejadi\framework_font_office_core;
+namespace moradnejadi\framework_front_office_core;
 
-use moradnejadi\framework_font_office_core\DB\SQL\Mapper;
+use moradnejadi\framework_front_office_core\DB\SQL\Mapper;
 
 class Instance extends Mapper
 {
     // Instantiate mapper
-    function __construct(\moradnejadi\framework_font_office_core\DB\SQL $db, $table = null)
+    function __construct(\moradnejadi\framework_front_office_core\DB\SQL $db, $table = null)
     {
         // This is where the mapper and DB structure synchronization occurs
         parent::__construct($db, $table);

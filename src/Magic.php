@@ -1,5 +1,5 @@
 <?php
-namespace moradnejadi\framework_font_office_core;
+namespace moradnejadi\framework_front_office_core;
 /*
 
 	Copyright (c) 2009-2017 F3::Factory/Bong Cosca, All rights reserved.

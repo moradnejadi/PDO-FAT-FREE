@@ -20,7 +20,7 @@
 
 */
 
-namespace moradnejadi\framework_font_office_core\DB;
+namespace moradnejadi\framework_front_office_core\DB;
 
 //! PDO wrapper
 class SQL {
@@ -170,8 +170,8 @@ class SQL {
         }
         if ($this->log===FALSE)
             $log=FALSE;
-        $fw=\moradnejadi\framework_font_office_core\Base::instance();
-        $cache=\moradnejadi\framework_font_office_core\Cache::instance();
+        $fw=\moradnejadi\framework_front_office_core\Base::instance();
+        $cache=\moradnejadi\framework_front_office_core\Cache::instance();
         $result=FALSE;
         for ($i=0;$i<$count;$i++) {
             $cmd=$cmds[$i];
@@ -311,8 +311,8 @@ class SQL {
      *	@param $ttl int|array
      **/
     function schema($table,$fields=NULL,$ttl=0) {
-        $fw = \moradnejadi\framework_font_office_core\Base::instance();
-        $cache = \moradnejadi\framework_font_office_core\Cache::instance();
+        $fw = \moradnejadi\framework_front_office_core\Base::instance();
+        $cache = \moradnejadi\framework_front_office_core\Cache::instance();
 
         if ($fw->CACHE && $ttl &&
             ($cached=$cache->exists(
@@ -376,7 +376,7 @@ class SQL {
                 'FIELD','TYPE','DEFVAL','NULLABLE','Y','PKEY','P']
         ];
         if (is_string($fields))
-            $fields=\moradnejadi\framework_font_office_core\Base::instance()->split($fields);
+            $fields=\moradnejadi\framework_front_office_core\Base::instance()->split($fields);
         $conv=[
             'int\b|integer'=>\PDO::PARAM_INT,
             'bool'=>\PDO::PARAM_BOOL,
@@ -511,7 +511,7 @@ class SQL {
      *	@param $options array
      **/
     function __construct($dsn,$user=NULL,$pw=NULL,array $options=NULL) {
-        $fw=\moradnejadi\framework_font_office_core\Base::instance();
+        $fw=\moradnejadi\framework_front_office_core\Base::instance();
         $this->uuid=$fw->hash($this->dsn=$dsn);
         if (preg_match('/^.+?(?:dbname|database)=(.+?)(?=;|$)/is',$dsn,$parts))
             $this->dbname=$parts[1];

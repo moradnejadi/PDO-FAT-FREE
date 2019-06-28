@@ -1,6 +1,6 @@
 <?php
 
-namespace moradnejadi\framework_font_office_core;
+namespace moradnejadi\framework_front_office_core;
 
 //! Factory class for single-instance objects
 abstract class Prefab
