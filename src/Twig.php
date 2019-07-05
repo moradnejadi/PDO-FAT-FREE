@@ -9,8 +9,8 @@ class Twig extends \Twig\Environment
     protected $pv;
 
     /**
-     *    Class constructor
-     *    return object
+     * Class constructor
+     * return object
      **/
     function __construct($pv)
     {
@@ -41,8 +41,8 @@ class Twig extends \Twig\Environment
         * */
         $function = new \Twig\TwigFunction('asset', function ($path) {
             $scheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
-            $base = $this->pv->get('BASE_URL_PROJECT');
-            $baseUrl = $scheme . '://' . $_SERVER['SERVER_NAME'] . $base;
+            $base = $this->pv->hive()['BASE'];
+            $baseUrl = $scheme . '://' . $_SERVER['SERVER_NAME'] . $base . '/';
             return $baseUrl . $path;
         });
         $this->addFunction($function);
