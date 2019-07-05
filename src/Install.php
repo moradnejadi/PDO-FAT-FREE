@@ -122,15 +122,16 @@ class Install
         $placeorgin = __DIR__ . '/../../../../node_modules';
         $place = __DIR__ . '/../../../../public/node_modules_alias';
 
-        if (is_file($placeorgin) and is_file($place)) {
+        if ((file_exists($placeorgin) and is_dir($placeorgin)) and (file_exists($place) and is_dir($place))) {
             $result['class'] = 'bg-success';
             $result['massage'] = 'folder "/public/node_modules_alias" is ok! ';
-            return $result;
-        } elseif ((is_file($placeorgin) and !is_file($place))) {
+        }
+        if (file_exists($placeorgin) and is_dir($placeorgin) and !file_exists($place) and !is_dir($place)) {
+            $result['class'] = 'bg-danger';
+            $result['massage'] = 'folder "/public/node_modules_alias" not exist! refrash page may be fix it!';
             symlink($placeorgin, $place);
         }
-        $result['class'] = 'bg-danger';
-        $result['massage'] = 'folder "/public/node_modules_alias" not exist!';
+
         return $result;
     }
 
