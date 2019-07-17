@@ -54,8 +54,12 @@ class Twig extends \Twig\Environment
          * @return url
          * */
         $functionRoute = new \Twig\TwigFunction('route', function ($path, $prameters = []) {
+            $scheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
+            $base = $this->pv->hive()['BASE'];
+            $baseUrl = $scheme . '://' . $_SERVER['SERVER_NAME'] . $base;
+            //convert route name to url
             $routeUrl = $this->pv->alias($path, $prameters);
-            return $routeUrl;
+            return $baseUrl . $routeUrl;
         });
         $this->addFunction($functionRoute);
 
