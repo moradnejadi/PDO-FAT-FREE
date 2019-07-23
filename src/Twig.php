@@ -51,7 +51,7 @@ class Twig extends \Twig\Environment
          * route function
          * convert route name to url
          * @params route name
-         * @return url
+         * @return url;
          * */
         $functionRoute = new \Twig\TwigFunction('route', function ($path, $prameters = []) {
             $scheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
@@ -72,6 +72,18 @@ class Twig extends \Twig\Environment
         $controllerCall = new \Twig\TwigFunction('controller', function ($controllerAndFunction, $prameters = []) {
             $result = $this->pv->call($controllerAndFunction, $prameters, 'beforeroute,afterroute');
             return $result;
+        });
+        $this->addFunction($controllerCall);
+
+        /*
+        * translation and systematic variable function
+        * return already set variable function
+        * @params word
+        * @params options of word
+        * @return result of get function
+        * */
+        $controllerCall = new \Twig\TwigFunction('get', function ($word, $params = []) {
+            return $this->pv->get($word, $params);
         });
         $this->addFunction($controllerCall);
 
